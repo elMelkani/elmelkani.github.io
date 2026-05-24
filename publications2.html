@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Publications</title>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Vollkorn&display=swap">
+<link rel="stylesheet" href="main.css" type="text/css"/>
+<script src="components/header.js" type="text/javascript" defer></script>
+<script>
+  window.onload = function () {
+    var el = document.getElementById("navPublications");
+    if (el) el.className = "on";
+  };
+</script>
+<style>
+  :root {
+    --card-bg: #ffffff;
+    --card-border: rgba(34, 34, 34, 0.12);
+    --card-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    --muted: rgba(34, 34, 34, 0.7);
+    --accent: #1D8FBA;
+    --accent-2: #40A596;
+  }
+
+  /* Make this page self-contained without fighting main.css layout. */
+  #contentpane {
+    max-width: 1100px;
+  }
+
+  .pubs-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 1.0rem;
+    margin-bottom: 2.0rem;
+  }
+
+  .pubs-header h4 {
+    margin-bottom: 0.2rem;
+  }
+
+  .pubs-subtitle {
+    color: var(--muted);
+    max-width: 82ch;
+  }
+
+  .pub-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .pub-card {
+    list-style: none;
+    background: linear-gradient(180deg, rgba(227, 228, 251, 0.25), rgba(255, 255, 255, 0.85));
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 0;
+    transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+  }
+
+  .pub-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.10);
+    border-color: rgba(29, 143, 186, 0.28);
+  }
+
+  .pub-thumb {
+    display: grid;
+    place-items: center;
+    background: radial-gradient(60% 60% at 30% 20%, rgba(64, 165, 150, 0.22), rgba(29, 143, 186, 0.08) 60%, rgba(255, 255, 255, 0.0));
+    border-right: 1px solid rgba(34, 34, 34, 0.08);
+    padding: 14px;
+  }
+
+  .pub-thumb img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    opacity: 0.92;
+    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.12));
+  }
+
+  .pub-body {
+    padding: 14px 16px 14px 16px;
+  }
+
+  .pub-title {
+    margin: 0 0 0.4rem 0;
+    font-size: 1.15em;
+    line-height: 1.35;
+    font-weight: 700;
+  }
+
+  .pub-title a {
+    color: #222;
+  }
+
+  .pub-title a:hover {
+    color: var(--accent);
+  }
+
+  .pub-authors {
+    margin: 0 0 0.45rem 0;
+    color: var(--muted);
+  }
+
+  .pub-summary {
+    margin: 0 0 0.85rem 0;
+    color: #222;
+  }
+
+  .pub-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.35rem;
+  }
+
+  .pub-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.28rem 0.62rem;
+    border-radius: 999px;
+    border: 1px solid rgba(29, 143, 186, 0.22);
+    background: rgba(29, 143, 186, 0.06);
+    color: var(--accent);
+    font-size: 0.92em;
+    line-height: 1.1;
+    text-decoration: none;
+  }
+
+  .pub-links a:hover {
+    border-color: rgba(64, 165, 150, 0.32);
+    background: rgba(64, 165, 150, 0.08);
+    color: var(--accent-2);
+  }
+
+  @media (max-width: 720px) {
+    .pub-card {
+      grid-template-columns: 92px 1fr;
+    }
+    .pub-thumb img {
+      width: 52px;
+      height: 52px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<navi-gator></navi-gator>
+
+<main id="contentpane">
+  <div id="content">
+    <div class="pubs-header">
+      <h4>Publications &amp; Preprints</h4>
+      <div class="pubs-subtitle">
+        A compact, card-style list with quick links to the DOI, arXiv, and PDFs.
+        For a complete list, see my
+        <a href="https://scholar.google.com/citations?user=eS5qIn0AAAAJ&hl=en" target="_blank">Google Scholar</a>.
+      </div>
+    </div>
+
+    <ul class="pub-grid">
+      <li class="pub-card">
+        <div class="pub-thumb">
+          <img src="paper.svg" alt="Paper icon">
+        </div>
+        <div class="pub-body">
+          <div class="pub-title">
+            <a href="https://arxiv.org/abs/2310.08734" target="_blank">Space-time symmetry and parametric resonance in dynamic mechanical systems</a>
+          </div>
+          <div class="pub-authors"><b>A. Melkani</b>, Jayson Paulose</div>
+          <div class="pub-summary">Preprint on space-time symmetry constraints and parametric resonance in driven mechanical systems.</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2310.08734" target="_blank">arXiv</a>
+            <a href="https://arxiv.org/pdf/2310.08734.pdf" target="_blank">PDF</a>
+            <a href="https://doi.org/10.48550/arXiv.2310.08734" target="_blank">arXiv DOI</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-card">
+        <div class="pub-thumb">
+          <img src="paper.svg" alt="Paper icon">
+        </div>
+        <div class="pub-body">
+          <div class="pub-title">
+            <a href="https://doi.org/10.1103/PhysRevResearch.5.023035" target="_blank">Degeneracies and symmetry breaking in pseudo-Hermitian matrices</a>
+          </div>
+          <div class="pub-authors"><b>A. Melkani</b></div>
+          <div class="pub-summary">Physical Review Research (2023).</div>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1103/PhysRevResearch.5.023035" target="_blank">DOI</a>
+            <a href="https://journals.aps.org/prresearch/pdf/10.1103/PhysRevResearch.5.023035" target="_blank">PDF</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-card">
+        <div class="pub-thumb">
+          <img src="paper.svg" alt="Paper icon">
+        </div>
+        <div class="pub-body">
+          <div class="pub-title">
+            <a href="https://doi.org/10.1103/PhysRevE.107.014501" target="_blank">Delocalization of interacting directed polymers on a periodic substrate: Localization length and critical exponents from non-Hermitian spectra</a>
+          </div>
+          <div class="pub-authors"><b>A. Melkani*</b>, A. Patapoff*, J. Paulose</div>
+          <div class="pub-summary">Physical Review E (2023).</div>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1103/PhysRevE.107.014501" target="_blank">DOI</a>
+            <a href="https://journals.aps.org/pre/pdf/10.1103/PhysRevE.107.014501" target="_blank">PDF</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-card">
+        <div class="pub-thumb">
+          <img src="paper.svg" alt="Paper icon">
+        </div>
+        <div class="pub-body">
+          <div class="pub-title">
+            <a href="https://doi.org/10.1103/PhysRevResearch.3.033060" target="_blank">Electron vortex beams in nonuniform magnetic fields</a>
+          </div>
+          <div class="pub-authors"><b>A. Melkani</b>, S. J. van Enk</div>
+          <div class="pub-summary">Physical Review Research (2021).</div>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1103/PhysRevResearch.3.033060" target="_blank">DOI</a>
+            <a href="https://journals.aps.org/prresearch/pdf/10.1103/PhysRevResearch.3.033060" target="_blank">PDF</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-card">
+        <div class="pub-thumb">
+          <img src="paper.svg" alt="Paper icon">
+        </div>
+        <div class="pub-body">
+          <div class="pub-title">
+            <a href="https://doi.org/10.1103/PhysRevA.102.022412" target="_blank">Eigenstate extraction with neural-network tomography</a>
+          </div>
+          <div class="pub-authors"><b>A. Melkani</b>, C. Gneiting, F. Nori</div>
+          <div class="pub-summary">Physical Review A (2020).</div>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1103/PhysRevA.102.022412" target="_blank">DOI</a>
+            <a href="https://journals.aps.org/pra/pdf/10.1103/PhysRevA.102.022412" target="_blank">PDF</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</main>
+
+<footer-text></footer-text>
+
+</body>
+</html>
