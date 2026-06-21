@@ -30,7 +30,7 @@ class FooterText extends HTMLElement {
 		this.innerHTML = 
 
 	`<div id="buffer"></div>
-	<footer id="footer">   <div>Last updated: September 2023. Stylesheets adapted from Kira Goldner's template.</div> </footer>
+	<footer id="footer">   <div>Last updated: September 2025. Stylesheets adapted from Kira Goldner's template.</div> </footer>
 `;
 	}
 }
