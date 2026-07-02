@@ -24,11 +24,17 @@ function renderAuthors(authors) {
 
 function iconLink(link) {
   const anchor = externalLink("", link.url);
-  const isDownload = link.label.toLowerCase() === "pdf";
+  const label = link.label.toLowerCase();
+  const isDownload = label === "pdf";
+  const isArxiv = label.includes("arxiv");
   const description = isDownload ? "Download PDF" : `Open ${link.label}`;
   const icon = element("img");
 
-  icon.src = isDownload ? "icons/download.png" : "icons/link.png";
+  icon.src = isDownload
+    ? "icons/download.png"
+    : isArxiv
+      ? "icons/arxiv.png"
+      : "icons/link.png";
   icon.alt = "";
   anchor.className = "pub-icon-link";
   anchor.setAttribute("aria-label", description);
