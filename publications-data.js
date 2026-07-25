@@ -1,20 +1,34 @@
 // Add, remove, or reorder publication objects in this array.
 window.PUBLICATIONS = [
   {
-    "title": "Space-time symmetry and nonreciprocal parametric resonance in mechanical systems",
-    "url": "https://arxiv.org/abs/2310.08734",
+    "title": "Space-time Floquet operator: Non-reciprocity and fractional topology of space-time crystals ",
+    "url": "https://arxiv.org/abs/2510.16562",
     "authors": [
       { "name": "A. Melkani", "me": true },
       { "name": "Jayson Paulose" }
     ],
-    "venue": { "name": "Physical Review E", "volume": "110", "article": "015003", "year": 2024, "note": "Editors’ Suggestion" },
+    "venue": { "name": "Arxiv preprint"},
+    "summary": "A framework for predicting the band structure of waves in systems with spatio-temporal symmetry provides a unified description of both non-reciprocal wave phenomena and robust, topologically quantized transport.",
+    "links": [
+      { "label": "arXiv", "url": "https://arxiv.org/abs/2510.16562" }
+    ],
+    "image": "figures/spaceTime.png"
+  },
+  {
+    "title": "Space-time symmetry and nonreciprocal parametric resonance in mechanical systems",
+    "url": "https://doi.org/10.1103/PhysRevE.110.015003",
+    "authors": [
+      { "name": "A. Melkani", "me": true },
+      { "name": "Jayson Paulose" }
+    ],
+    "venue": { "name": "Physical Review E", "volume": "110", "article": "015003", "year": 2024, "note": "Editors’ Suggestion and 2025 Irwin Oppenheim Award" },
     "summary": "Among other things, how to make waves propagate unidirectionally in a network of ordinary linear oscillators?",
     "links": [
       { "label": "DOI", "url": "https://doi.org/10.1103/PhysRevE.110.015003" },
-      { "label": "arXiv", "url": "https://arxiv.org/abs/2310.08734" },
-      { "label": "PDF", "url": "https://arxiv.org/pdf/2310.08734.pdf" }
+      { "label": "PDF", "url": "publications/PhysRevE.110.015003.pdf" },
+      { "label": "arXiv", "url": "https://arxiv.org/abs/2310.08734" }
     ],
-    "image": "figures/oscillators.png"
+    "image": "figures/oscillatorsOld.png"
   },
   {
     "title": "Degeneracies and symmetry breaking in pseudo-Hermitian matrices",
@@ -24,7 +38,8 @@ window.PUBLICATIONS = [
     "summary": "How real eigenvalues turn into complex conjugate pairs (signifying the emergence of amplified modes or phase transitions) in a class of matrices.",
     "links": [
       { "label": "DOI", "url": "https://doi.org/10.1103/PhysRevResearch.5.023035" },
-      { "label": "PDF", "url": "publications/PhysRevResearch.5.023035.pdf" }
+      { "label": "PDF", "url": "publications/PhysRevResearch.5.023035.pdf" },
+      { "label": "arXiv", "url": "https://arxiv.org/abs/2209.06887" }
     ],
     "image": "figures/pseudo.png"
   },
@@ -40,7 +55,8 @@ window.PUBLICATIONS = [
     "summary": "Non-Hermitian spectra characterize the delocalization phase transition in interacting directed polymers.",
     "links": [
       { "label": "DOI", "url": "https://doi.org/10.1103/PhysRevE.107.014501" },
-      { "label": "PDF", "url": "https://journals.aps.org/pre/pdf/10.1103/PhysRevE.107.014501" }
+      { "label": "PDF", "url": "https://journals.aps.org/pre/pdf/10.1103/PhysRevE.107.014501" },
+      { "label": "arXiv", "url": "https://arxiv.org/abs/2112.05741" }
     ],
     "image": "figures/polymers.png"
   },
@@ -55,7 +71,8 @@ window.PUBLICATIONS = [
     "summary": "How a vortex beam (here, an electron's wave function) propagates through a helical waveguide (here, a magnetic field).",
     "links": [
       { "label": "DOI", "url": "https://doi.org/10.1103/PhysRevResearch.3.033060" },
-      { "label": "PDF", "url": "publications/PhysRevResearch.3.033060.pdf" }
+      { "label": "PDF", "url": "publications/PhysRevResearch.3.033060.pdf" },
+      { "label": "arXiv", "url": "https://arxiv.org/abs/2011.11729" }
     ],
     "image": "figures/beam.png"
   },
@@ -71,8 +88,8 @@ window.PUBLICATIONS = [
     "summary": "Reconstructing a quantum state from measurement data using neural-networks and some theoretically motivated low-rank approximations.",
     "links": [
       { "label": "DOI", "url": "https://doi.org/10.1103/PhysRevA.102.022412" },
-      { "label": "PDF", "url": "https://journals.aps.org/pra/pdf/10.1103/PhysRevA.102.022412" },
-      { "label": "arXiv", "url": "https://arxiv.org/abs/2310.08734" }
+      { "label": "PDF", "url": "publications/PhysRevA.102.022412.pdf" },
+      { "label": "arXiv", "url": "https://arxiv.org/abs/1911.07506" }
     ],
     "image": "figures/canvas.png"
   }

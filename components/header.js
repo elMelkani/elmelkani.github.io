@@ -12,7 +12,6 @@ class Navigator extends HTMLElement {
 		<div class="off" id="navResearch"><a href="research.html">Research</a></div>
 		<div class="off" id="navPublications"><a href="publications.html">Publications</a></div>
 		<div class="off" id="navCV"> <a href="cv_files/cv.pdf" target="_blank">CV</a></div>
-		<div class="off" id="navBlog"><a href="blog.html">Blog</a></div>
 	</nav>
 	<div id="empty"></div>
 `;

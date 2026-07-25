@@ -22,24 +22,23 @@ function renderAuthors(authors) {
   return container;
 }
 
-function iconLink(link) {
-  const anchor = externalLink("", link.url);
-  const label = link.label.toLowerCase();
-  const isDownload = label === "pdf";
-  const isArxiv = label.includes("arxiv");
-  const description = isDownload ? "Download PDF" : `Open ${link.label}`;
-  const icon = element("img");
+function linkKind(label) {
+  const normalized = label.toLowerCase();
+  if (normalized === "pdf") return "pdf";
+  if (normalized.includes("arxiv")) return "arxiv";
+  if (normalized === "doi" || normalized === "link") return "doi";
+  return normalized.replace(/[^a-z0-9]+/g, "-") || "link";
+}
 
-  icon.src = isDownload
-    ? "icons/download.png"
-    : isArxiv
-      ? "icons/arxiv.png"
-      : "icons/link.png";
-  icon.alt = "";
-  anchor.className = "pub-icon-link";
+function publicationLink(link) {
+  const kind = linkKind(link.label);
+  const displayLabel = kind === "arxiv" ? "ARXIV" : kind.toUpperCase();
+  const description = kind === "pdf" ? "Download PDF" : `Open ${displayLabel}`;
+  const anchor = externalLink(`[${displayLabel}]`, link.url);
+
+  anchor.className = `pub-text-link pub-link-${kind}`;
   anchor.setAttribute("aria-label", description);
   anchor.title = description;
-  anchor.append(icon);
   return anchor;
 }
 
@@ -52,7 +51,7 @@ function renderVenue(venue, links) {
   if (venue.note) container.append(` — ${venue.note}`);
 
   const linkGroup = element("span", "pub-links");
-  links.forEach((link) => linkGroup.append(iconLink(link)));
+  links.forEach((link) => linkGroup.append(publicationLink(link)));
   container.append(linkGroup);
   return container;
 }

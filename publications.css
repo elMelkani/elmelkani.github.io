@@ -5,7 +5,7 @@
 }
 
 #contentpane {
-  max-width: 1000px;
+  max-width: 1200px;
 }
 
 .pubs-header {
@@ -78,28 +78,22 @@
 .pub-links {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.55rem;
   margin-left: 0.65rem;
   vertical-align: middle;
 }
 
-.pub-icon-link {
-  display: inline-flex;
-  align-items: center;
-  opacity: 0.75;
-  transition: opacity 120ms ease, transform 120ms ease;
+.pub-text-link {
+  font-size: 0.92em;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
-.pub-icon-link img {
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
-}
+.pub-link-doi { color: #1d8fba; }
+.pub-link-pdf { color: #a12626; }
+.pub-link-arxiv { color: #3f7d4a; }
 
-.pub-icon-link:hover {
-  opacity: 1;
-  transform: translateY(-1px);
-}
+.pub-text-link:hover { color: var(--accent-2); }
 
 .pub-error { color: #a12626; }
 
