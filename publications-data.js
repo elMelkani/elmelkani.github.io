@@ -21,14 +21,14 @@ window.PUBLICATIONS = [
       { "name": "A. Melkani", "me": true },
       { "name": "Jayson Paulose" }
     ],
-    "venue": { "name": "Physical Review E", "volume": "110", "article": "015003", "year": 2024, "note": "Editors’ Suggestion and 2025 Irwin Oppenheim Award" },
+    "venue": { "name": "Physical Review E", "volume": "110", "article": "015003", "year": 2024, "note": "Editors’ Suggestion & 2025 Irwin Oppenheim Award" },
     "summary": "Among other things, how to make waves propagate unidirectionally in a network of ordinary linear oscillators?",
     "links": [
       { "label": "DOI", "url": "https://doi.org/10.1103/PhysRevE.110.015003" },
       { "label": "PDF", "url": "publications/PhysRevE.110.015003.pdf" },
       { "label": "arXiv", "url": "https://arxiv.org/abs/2310.08734" }
     ],
-    "image": "figures/oscillatorsOld.png"
+    "image": "figures/oscillators.svg"
   },
   {
     "title": "Degeneracies and symmetry breaking in pseudo-Hermitian matrices",
