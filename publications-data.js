@@ -1,11 +1,28 @@
 // Add, remove, or reorder publication objects in this array.
 window.PUBLICATIONS = [
   {
+    "title": "The fluctuating shape of fish schools: a spectroscopic probe of their collective motion",
+    "url": "https://arxiv.org/abs/2510.16562",
+    "authors": [
+      { "name": "A. Melkani*", "me": true },
+      { "name": "A. Delory*" },
+      { "name": "J. Belusso" },
+      { "name": "G. Calvet" },
+      { "name": "M. Munari" },
+      { "name": "D. Bartolo*" }
+    ],
+    "venue": { "name": "In preparation"},
+    "summary": "Field measurements and theory reveal how shape fluctuations in milling fish schools encode the laws governing their collective motion.",
+    "links": [
+    ],
+    "image": "figures/fish.png"
+  },
+  {
     "title": "Space-time Floquet operator: Non-reciprocity and fractional topology of space-time crystals ",
     "url": "https://arxiv.org/abs/2510.16562",
     "authors": [
       { "name": "A. Melkani", "me": true },
-      { "name": "Jayson Paulose" }
+      { "name": "J. Paulose" }
     ],
     "venue": { "name": "Arxiv preprint"},
     "summary": "Predicts wave band structures in systems with spatiotemporal symmetry, including both nonreciprocal wave behavior and topologically quantized transport.",
@@ -19,7 +36,7 @@ window.PUBLICATIONS = [
     "url": "https://doi.org/10.1103/PhysRevE.110.015003",
     "authors": [
       { "name": "A. Melkani", "me": true },
-      { "name": "Jayson Paulose" }
+      { "name": "J. Paulose" }
     ],
     "venue": { "name": "Physical Review E", "volume": "110", "article": "015003", "year": 2024, "note": "Editors’ Suggestion & 2025 Irwin Oppenheim Award" },
     "summary": "Among other things, how to make waves propagate unidirectionally in a network of ordinary linear oscillators?",
