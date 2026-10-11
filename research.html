@@ -4,13 +4,57 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Research | Abhijeet Melkani</title>
-	<meta name="description" content="Research interests of Abhijeet Melkani, including active matter, biophysics, collective dynamics, kinetic theory, and non-Hermitian dynamics.">
+	<meta name="description" content="Research by Abhijeet Melkani on active matter, biological collectives, non-reciprocal dynamics, and space-time metamaterials.">
 	<link rel="canonical" href="https://elmelkani.github.io/research.html">
-	<link rel="stylesheet" href="main.css" type="text/css"/>
+	<link rel="stylesheet" href="main.css" type="text/css">
 	<script src="components/layout.js" type="text/javascript" defer></script>
 	<script>
-		window.onload=function() {document.getElementById("navResearch").className = "on";}
+		window.onload = function () {
+			document.getElementById("navResearch").className = "on";
+		};
 	</script>
+	<style>
+		.figure-pair {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 1rem;
+			margin: 1.5rem 0;
+		}
+
+		.figure-pair figure {
+			margin: 0;
+		}
+
+		.figure-pair img {
+			display: block;
+			width: 80%;
+			height: auto;
+			margin: 0 auto;
+		}
+
+		.space-time-figures img {
+			height: 11.2rem;
+			object-fit: contain;
+			background: #fff;
+		}
+
+		.space-time-figures .smaller-figure {
+			padding: 1.6rem;
+		}
+
+		.figure-pair figcaption {
+			width: 80%;
+			margin: 0.35rem auto 0;
+			color: var(--muted);
+			font-size: 0.75rem;
+		}
+
+		@media (max-width: 600px) {
+			.figure-pair {
+				grid-template-columns: 1fr;
+			}
+		}
+	</style>
 </head>
 
 <body>
@@ -18,12 +62,116 @@
 
 	<main id="contentpane">
 		<div id="content">
-			Coming soon.
-			Meanwhile, check out the <a href="publications.html">Publications</a> page.
+			<h1>Research</h1>
 
+			<p>
+				I have organized my research into three connected themes. 
+				A common thread—one that emerged somewhat unexpectedly—is the search for collective variables, response functions, and symmetries that make complex nonequilibrium dynamics predictable. 
+				Below, I highlight this connection by pairing the concrete question behind each project with the broader question it addresses.
+			</p>
+
+			<hr>
+
+			<section>
+				<h2>Non-reciprocal transitions in active and soft matter</h2>
+				<p><i>How do non-reciprocal interactions change stability, localization, and response?</i></p>
+
+				<p>
+					An interaction is <b>non-reciprocal</b> when one component affects another differently from how it is affected in return.
+					Such interactions are common in active systems and can generate pattern formation, phase transitions, edge currents, and amplification.
+				</p>
+				<p>
+					One example of a non-reciprocal system is a collection of fluctuating polymer chains under shear (left figure): the shear biases their diffusion in one direction.
+					At sufficiently strong shear, the polymers undergo a phase transition that makes them delocalize throughout the substrate.
+					The transition occurs when two real eigenvalues of an associated linear operator merge and become complex, as shown in the right figure.
+					These spectral transitions of pseudo-Hermitian operators control the onset of instability in many non-reciprocal systems.
+				</p>
+
+				<div class="figure-pair">
+					<figure>
+						<img src="figures_research/directed_polymers.png" width="1000" height="699" loading="lazy" alt="Directed polymers tilted by an applied force on a periodic substrate.">
+						<figcaption>Directed-polymer delocalization.</figcaption>
+					</figure>
+					<figure>
+						<img src="figures_research/real_to_complex.png" width="1326" height="655" loading="lazy" alt="Two real eigenvalues meet and split into a complex-conjugate pair.">
+						<figcaption>A pseudo-Hermitian spectral transition.</figcaption>
+					</figure>
+				</div>
+
+				<p>Related work: <a href="https://doi.org/10.1103/PhysRevE.107.014501">directed-polymer delocalization</a> and <a href="https://doi.org/10.1103/PhysRevResearch.5.023035">pseudo-Hermitian degeneracies</a>.</p>
+			</section>
+
+			<hr>
+
+			<section>
+				<h2>Waves in metamaterials with spatio-temporal order</h2>
+				<p><i>How can microscopic dynamics be designed to produce a desired wave response?</i></p>
+
+				<p>
+					A <b>dynamical metamaterial</b> is an engineered assembly of active or non-reciprocal units whose collective motion produces unusual wave behavior.
+				</p>
+				<p>
+					One simple building block consists of three coupled oscillators driven in a traveling-wave pattern (left).
+					Although each oscillator follows ordinary Newtonian mechanics, together they can be tuned so that waves travel in only one direction.
+					Putting such units together creates metamaterials whose order is intertwined across space and time.
+					Its wave band band structures (right) host complicated topological windings and describe both non-reciprocal wave propagation and robust, fractionally quantized transport.
+					These ideas also apply to active systems with phase-locked dynamics, such as beating cilia and active spinner arrays.
+				</p>
+
+				<div class="figure-pair space-time-figures">
+					<figure>
+						<img class="smaller-figure" src="figures_research/mode2.png" width="1200" height="1204" loading="lazy" alt="Parametrically driven oscillators and the trajectories of their modes in the complex plane.">
+						<figcaption>Directional amplification in a driven oscillator network.</figcaption>
+					</figure>
+					<figure>
+						<img src="figures_research/bandSpaceTime.svg" width="165" height="146" loading="lazy" alt="A space-time crystal and its intertwined spatial and temporal symmetries.">
+						<figcaption>Bands of a space-time crystal.</figcaption>
+					</figure>
+				</div>
+
+				<p>Related work: <a href="https://doi.org/10.1103/PhysRevE.110.015003">non-reciprocal parametric resonance</a>, <a href="https://arxiv.org/abs/2510.16562">the space-time Floquet operator</a>, and <a href="https://doi.org/10.1103/PhysRevResearch.3.033060">electron vortex beams</a>.</p>
+			</section>
+
+			<hr>
+
+			<section>
+				<h2>Morphodynamics of finite biological collectives</h2>
+				<p><i>What can the shape fluctuations of a biological collective reveal about the laws it follows?</i></p>
+
+				<p>
+				The physics of <b>biological self-organization</b> asks how living systems create large-scale order, shape, and motion from local interactions.
+				Most theories focus on behavior within the bulk, while much less is known about the role of interfaces, where the collective meets its surroundings.
+				</p>
+
+				<p>
+				The shape of wild milling fish schools (left figure) can be described by a continuum description of collective variables such as density and flow.
+				In this theory, fluctuations in density and velocities of fish within the school propogate to the boundary and excite it much like an earthquake. 
+				The boundary has its own natural ways of responding (right figure, which is admittedly a bit abstract) by deforming and relaxing.
+				The observed shape fluctuations arise from the interplay of these bulk disturbances and boundary responses.
+				</p>
+				<p>
+				Because the bulk and boundary dynamics are so intimately involved, the fluctuating shape acts as a probe of the entire school.
+				It allows both bulk and boundary material properties to be inferred from changes in the school's outline alone.
+				</p>
+
+				<div class="figure-pair">
+					<figure>
+						<img src="figures_research/hamptons.svg" width="1000" height="691" loading="lazy" alt="Wild milling fish schools together with their contours, density, and velocity fields.">
+						<figcaption>The fluctuating contour of a milling fish school.</figcaption>
+					</figure>
+					<figure>
+						<img src="figures_research/spectra.png" width="1000" height="818" loading="lazy" alt="Measured and simulated fish-school fluctuation spectra, frequencies, damping rates, and wave speeds.">
+						<figcaption>Hydrodynamic theory of boundary response.</figcaption>
+					</figure>
+				</div>
+
+				<p>
+					Related work: <i>The shape of fish schools</i> (in preparation) and <a href="https://doi.org/10.1103/PhysRevA.102.022412"> quantum state tomography</a> (which relates to inference procedures).
+				</p>
+			</section>
 		</div>
-	
 	</main>
+
 	<footer-text></footer-text>
 </body>
 </html>
