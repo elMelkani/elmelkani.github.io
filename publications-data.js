@@ -18,15 +18,17 @@ window.PUBLICATIONS = [
     "image": "figures/fish.png"
   },
   {
-    "title": "Space-time Floquet operator: Non-reciprocity and fractional topology of space-time crystals ",
+    "title": "Space-time Floquet operator: Nonreciprocity and fractional topology of space-time crystals ",
     "url": "https://arxiv.org/abs/2510.16562",
     "authors": [
       { "name": "A. Melkani", "me": true },
       { "name": "J. Paulose" }
     ],
-    "venue": { "name": "Arxiv preprint"},
+    "venue": { "name": "Physical Review Research", "volume": "8", "article": "L042009", "year": 2026},
     "summary": "Predicts wave band structures in systems with spatiotemporal symmetry, including both nonreciprocal wave behavior and topologically quantized transport.",
     "links": [
+      { "label": "DOI", "url": "https://doi.org/10.1103/xcls-6nzd" },
+      { "label": "PDF", "url": "publications/PhysRevResearch.8.L042009.pdf" },
       { "label": "arXiv", "url": "https://arxiv.org/abs/2510.16562" }
     ],
     "image": "figures/spaceTime.png"
